@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Insert title here</title>
+</head>
+<body>
+<div>
+<div>好友详情：<div>
+	<div th:text="帐号：+${user.account}"></div>
+	<div th:text="年龄：+${user.age}"></div>
+	<div th:text="性别：+${user.sax}"></div>
+	<div th:text="住址：+${user.location}"></div>
+	<a style="text-decoration:none;color:#000000;" th:href="@{/addfriend(id=${user?.id})}">添加好友</a>
+    <a style="text-decoration:none;color:#000000;" th:href="@{/findAllnofriend}">返回我的好友列表</a>
+</div>
+</body>
+</html>

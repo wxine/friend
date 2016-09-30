@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Insert title here</title>
+</head>
+<body>
+<div>
+<div>我的好友：<div>
+	<div th:each="user,row:${user}">
+		<a style="text-decoration:none;color:#000000;" th:href="@{/details(id=${user?.id})}">
+        <div style='display: inline;'th:text="帐号：+${user?.account}"></div></a>
+        <div style='display: inline;'th:text="年龄：+${user?.age}"></div>
+        <a style="text-decoration:none;color:#000000;" th:href="@{/deletefriend(id=${user?.id})}">删除好友</a>
+	</div>
+	<div th:text="${count}+个联系人"></div>
+	<a style="text-decoration:none;color:#000000;" th:href="@{/findAllnofriend}">添加好友</a>
+</div>
+</body>
+</html>
